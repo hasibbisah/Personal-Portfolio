@@ -1,5 +1,6 @@
 import { FileText, Download } from "lucide-react";
 import SectionHeading from "./SectionHeading";
+import RevealGroup from "./RevealGroup";
 import { education } from "@/lib/data";
 
 export default function Resume() {
@@ -8,7 +9,7 @@ export default function Resume() {
       <div className="max-w-content mx-auto px-6 md:px-10">
         <SectionHeading index="07" title="Resume" />
 
-        <div className="grid md:grid-cols-[1fr_1.3fr] gap-12 items-start">
+        <RevealGroup className="grid md:grid-cols-[1fr_1.3fr] gap-12 items-start">
           <div className="reveal border border-midnight-border rounded-lg p-8 flex flex-col items-start gap-5 bg-midnight-surface">
             <FileText className="text-coral" size={32} />
             <div>
@@ -20,7 +21,7 @@ export default function Resume() {
                 ready to share with your team.
               </p>
             </div>
-            <a
+            
               href="/Mohammad_Mesbah_Uddin_Hasib_Resume.pdf"
               download
               className="inline-flex items-center gap-2 px-5 py-2.5 rounded-md bg-coral text-midnight text-sm font-medium hover:bg-coral-bright transition-colors"
@@ -50,7 +51,7 @@ export default function Resume() {
               ))}
             </div>
           </div>
-        </div>
+        </RevealGroup>
       </div>
     </section>
   );
