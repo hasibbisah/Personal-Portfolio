@@ -1,4 +1,5 @@
 import SectionHeading from "./SectionHeading";
+import RevealGroup from "./RevealGroup";
 
 const pillars = [
   {
@@ -17,7 +18,7 @@ export default function About() {
       <div className="max-w-content mx-auto px-6 md:px-10">
         <SectionHeading index="01" title="About Me" />
 
-        <div className="grid md:grid-cols-[1fr_1fr] gap-14">
+        <RevealGroup className="grid md:grid-cols-[1fr_1fr] gap-14">
           <div className="reveal">
             <h3 className="font-display text-xl text-frost mb-4">Who I Am</h3>
             <p className="text-frost-soft leading-relaxed mb-4">
@@ -45,7 +46,7 @@ export default function About() {
               </div>
             ))}
           </div>
-        </div>
+        </RevealGroup>
       </div>
     </section>
   );
