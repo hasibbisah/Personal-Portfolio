@@ -6,8 +6,8 @@ import { impactStats } from "@/lib/data";
 
 function StatValue({ value }: { value: string }) {
   const numeric = parseInt(value.replace(/[^0-9]/g, ""), 10);
-  const suffix = value.replace(/[0-9,]/g, "");
-  const isNumeric = !isNaN(numeric);
+  const isNumeric = !isNaN(numeric) && /^[0-9]/.test(value);
+  const suffix = isNumeric ? value.replace(/^[0-9,]+/, "") : "";
   const [display, setDisplay] = useState(isNumeric ? 0 : value);
   const ref = useRef<HTMLSpanElement>(null);
   const started = useRef(false);
@@ -38,8 +38,7 @@ function StatValue({ value }: { value: string }) {
 
   return (
     <span ref={ref}>
-      {isNumeric ? display.toLocaleString() : value}
-      {suffix}
+      {isNumeric ? `${display.toLocaleString()}${suffix}` : value}
     </span>
   );
 }
