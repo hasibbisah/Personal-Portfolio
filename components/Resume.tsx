@@ -21,7 +21,7 @@ export default function Resume() {
                 ready to share with your team.
               </p>
             </div>
-            
+            <a
               href="/Mohammad_Mesbah_Uddin_Hasib_Resume.pdf"
               download
               className="inline-flex items-center gap-2 px-5 py-2.5 rounded-md bg-coral text-midnight text-sm font-medium hover:bg-coral-bright transition-colors"
